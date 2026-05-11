@@ -11,7 +11,6 @@ from .email_convert import EmailConverter
 from .converter_interface import ConverterInterface
 from .archive_convert import ArchiveConverter
 from .calibre_convert import CalibreConverter
-from .kepubify_convert import KepubifyConverter
 from .ocrmypdf_convert import OCRmyPDFConverter
 from .inkscape_convert import VectorConverter
 from .cbz_convert import CBZConverter
@@ -32,7 +31,6 @@ __all__ = [
     "EmailConverter", 
     "ArchiveConverter", 
     "CalibreConverter",
-    "KepubifyConverter",
     "OCRmyPDFConverter",
     "VectorConverter",
     "CBZConverter",
