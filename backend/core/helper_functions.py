@@ -437,7 +437,7 @@ def sanitize_filename(filename: str) -> str:
     
     return cleaned
 
-def delete_file_and_metadata(file_id: str, file_db: "FileDB", raise_if_not_found: bool = True):
+def delete_file_and_metadata(file_id: str, file_db: "FileDB", raise_if_not_found: bool = False):
     """
     Delete a file from disk and remove its metadata from the database.
 

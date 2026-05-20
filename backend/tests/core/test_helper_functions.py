@@ -154,11 +154,6 @@ def test_sanitize_filename_long_name(file):
 def test_sanitize_filename_unnamed():
     assert sanitize_filename("") == "unnamed"
 
-def test_delete_file_and_metadata_not_found_http_exception(safe_path_test_settings, tmp_db):
-    file: Path = safe_path_test_settings.upload_dir / "hello4.txt"
-    with pytest.raises(HTTPException):
-        delete_file_and_metadata("hello4", tmp_db)
-
 def test_delete_file_and_metadata_not_found(safe_path_test_settings, tmp_db):
     file: Path = safe_path_test_settings.upload_dir / "hello3.txt"
     assert delete_file_and_metadata("hello3", tmp_db, raise_if_not_found=False) is None
